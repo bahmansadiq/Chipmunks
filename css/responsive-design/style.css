@@ -1,6 +1,6 @@
 body{
   max-width: 960px;
-  min-width: 700px;
+  min-width: 300px;
 }
 blockquote {
   border-left: 5px solid blue;
@@ -44,4 +44,9 @@ main{
   margin-left: 200px;
   vertical-align: middle;
 
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
 }

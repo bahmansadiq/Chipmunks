@@ -10,3 +10,16 @@
 #after entering to the room say "Hellow every one"
 # if at the row=4 com=12 there will is a sign writen your name and its empty take the seat.
 #if you don't see it, wait 5 seconds then ask for help.
+
+
+
+#Release 1: Find a Real-Life Algorithm
+#How to open the door for family members and welcome them home:
+#if the door bell rings
+#go closed to the door and stop
+#Ask who is this?
+#if the name provided is one of the family members 
+#open the door
+#when he/she entered home say "welcome home"
+#else if the name provided is not matching any one of the family memebers name
+#then say name provide is not allowed to enter this home and repeat step #3

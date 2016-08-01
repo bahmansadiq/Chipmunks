@@ -1,0 +1,12 @@
+#Release 0: Equip Your New Robot
+
+#Your are at the ground floor infront of Elevator
+#Tthere are two buttons for elevator
+#press the left button to go up
+#inside the elevator in selection dashboard select row=5 col=10 to go to 10th floor
+#wait 20Sec turn around afer 2 seconds start walking out of the door
+#walking straing 100 feet and then turn left walk ten feet straight 
+#say the secret word "Bedding" to open the door
+#after entering to the room say "Hellow every one"
+# if at the row=4 com=12 there will is a sign writen your name and its empty take the seat.
+#if you don't see it, wait 5 seconds then ask for help.

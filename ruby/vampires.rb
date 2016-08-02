@@ -7,10 +7,6 @@ year_born=gets.chomp.to_i
 actual_age = 2016 - year_born 
 validated_age = actual_age==given_age
 wrong_age= actual_age != given_age
-p validated_age
-p wrong_age
-
-
 
 puts" Our company cafeteria serves garlic bread. Should we order some for you? "
 eat_garlic=gets.chomp 
@@ -34,3 +30,4 @@ elsif wrong_age && (eat_garlic=="no") && (health_insurance=="no")
 else
 	puts "Results inconclusive."
 end
+puts" name #{name} age #{given_age} birth year #{year_born}"

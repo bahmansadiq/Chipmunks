@@ -1,28 +1,36 @@
 puts" What is your name?"
-name=gets.chomp.to_s
+name=gets.chomp
 puts" How old are you?"
 given_age=gets.chomp.to_i
 puts" What year were you born?"
 year_born=gets.chomp.to_i
-actual_age= 2016 - year_born ==true 
-p actual_age
+actual_age = 2016 - year_born 
+validated_age = actual_age==given_age
+wrong_age= actual_age != given_age
+p validated_age
+p wrong_age
+
+
+
 puts" Our company cafeteria serves garlic bread. Should we order some for you? "
-user_answer=gets.chomp.to_s
-if user_answer=="yes"
-  user_answer=true
-elsif user_answer=="no"
-	   false
-end
+eat_garlic=gets.chomp 
 
-  	
 puts" Would you like to enroll in the company’s health insurance? "
-health_insurance=gets.chomp.to_s
- if health_insurance=="yes"
- 	true
- elsif health_insurance="no"
- 	false
- end
+health_insurance=gets.chomp
 
 
-if actual_age && (user_answer || health_insurance)
+
+if (validated_age && eat_garlic && health_insurance) && (name =="Drake Cula" || name== "Tu Fang")
+	puts "Definitely a vampire."
+elsif  	 validated_age && (eat_garlic=="yes"|| health_insurance=="yes")
 	puts"Probably not a vampire."
+
+elsif wrong_age && (eat_garlic=="yes" || health_insurance=="yes")
+	puts"Probably a vampire."
+
+elsif wrong_age && (eat_garlic=="no") && (health_insurance=="no")
+
+	puts "Almost certainly a vampire."
+else
+	puts "Results inconclusive."
+end

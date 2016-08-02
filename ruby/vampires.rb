@@ -20,7 +20,7 @@ until count > no_employees
 	puts" Would you like to enroll in the company’s health insurance? "
 	health_insurance=gets.chomp
 
-		if (validated_age && eat_garlic && health_insurance) && (name =="Drake Cula" || name== "Tu Fang")
+    if (validated_age && eat_garlic && health_insurance) && (name =="Drake Cula" || name== "Tu Fang")
 			puts "Definitely a vampire."
 		elsif  	 validated_age && (eat_garlic=="yes"|| health_insurance=="yes")
 			puts"Probably not a vampire."
@@ -35,7 +35,7 @@ until count > no_employees
 		else
 			puts "Results inconclusive."
 
-		end
+	end
 	puts" name #{name} age #{given_age} birth year #{year_born}"
 		sur_array << name
 		sur_array << given_age
@@ -44,10 +44,10 @@ until count > no_employees
 	
 	count += 1
 end 
-	puts"#{sur_array}"
+puts"#{sur_array}"
 
-	arr_allergies=[]
-	while true
+arr_allergies=[]
+while true
 		puts"Please name any allergies you have otherwise write done when finished"
 		user_allergies=gets.chomp
 		if user_allergies=="Sunshine"
@@ -57,6 +57,6 @@ end
 			break
 		end 
 		arr_allergies << user_allergies
-	end
-	
-	puts"#{name} has allergies #{arr_allergies}"
+end
+puts"#{sur_array} has allergies #{arr_allergies}"
+puts" Actually, never mind! What do these questions have to do with anything? Let's all be friends."

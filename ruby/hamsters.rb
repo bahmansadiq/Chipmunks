@@ -20,3 +20,8 @@ while true
 		break
 	end
 end	
+puts "How old is you hamster?"
+ham_age=gets.chomp.to_i
+  if ham_age==""
+      ham_age=nil
+   end

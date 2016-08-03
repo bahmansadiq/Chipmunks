@@ -37,14 +37,11 @@ until count > no_employees
 
 	end
 	puts" name #{name} age #{given_age} birth year #{year_born}"
-		sur_array << name
-		sur_array << given_age
-		sur_array << eat_garlic
-		sur_array << health_insurance
-	
+	sur_array.push(name, given_age, eat_garlic, health_insurance)
+	puts"#{sur_array}"
 	count += 1
 end 
-puts"#{sur_array}"
+
 
 arr_allergies=[]
 while true
@@ -60,3 +57,5 @@ while true
 end
 puts"#{sur_array} has allergies #{arr_allergies}"
 puts" Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+

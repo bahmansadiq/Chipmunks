@@ -24,6 +24,6 @@ ham_age=gets.chomp.to_i
    if ham_age==""
       ham_age=nil
    end
-   puts "Hamster name #{ham_name}, volume level #{ham_vol}, 
+puts "Hamster name #{ham_name}, volume level #{ham_vol}, 
 fur color #{ham_fur}, adoption candidacy #{ham_candidate} and
 age is #{ham_age}"

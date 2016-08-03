@@ -10,3 +10,13 @@ ham_vol=gets.chomp.to_i
 
 end 
 	
+puts "What is your hamster's fur color?"
+ham_fur=gets.chomp
+
+while true 
+	puts "Is this hamster a good candidate for adoption? Type \"yes\" or \"no\"."
+	ham_candidate = gets.chomp
+	if (ham_candidate == "yes" || ham_candidate =="no")
+		break
+	end
+end	

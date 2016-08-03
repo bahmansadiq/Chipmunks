@@ -7,7 +7,6 @@ while true
 	    if   (ham_vol<= 10 && ham_vol>=0)
 	      break
 	    end 
-
 end 
 	
 puts "What is your hamster's fur color?"

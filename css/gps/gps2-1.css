@@ -20,3 +20,10 @@ header{
     vertical-align: top;
     padding: 10px;
   }
+  footer{
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.8em;
+    color: blue;
+
+  }

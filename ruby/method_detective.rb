@@ -41,3 +41,27 @@
 
 "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
+# Defined detective method to use most of the above methods.
+# It takes one parameter (incoming)
+def detective(incoming)
+#Declare an empty string to find ordinal number of the given string and return it at the end
+	incoming_ord = 0
+# If the incoming is not empty run the following code:
+	if incoming.length!=0
+# using .ord find ordinal number of given string
+		 for i in 0...incoming.length 
+		    incoming_ord+= incoming[i].ord 
+		 end
+	puts incoming.swapcase
+	puts incoming.prepend("Hi ")
+	puts incoming.chop!
+	puts incoming.delete("aeiou")
+    puts incoming.replace("Johny")
+ #if the incoming is empty print the following code
+    else 
+	puts"It's an empty string"
+    end 
+	return puts" The ordinal number for the original string  is #{incoming_ord}"
+end 
+# call detective method and pass one argument 
+detective("Obama")

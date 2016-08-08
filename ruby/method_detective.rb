@@ -56,7 +56,12 @@ def detective(incoming)
 	puts incoming.prepend("Hi ")
 	puts incoming.chop!
 	puts incoming.delete("aeiou")
+	puts incoming.count("a")
+	p incoming.squeeze
+	puts incoming.upcase
+	p incoming.center(40," " )
     puts incoming.replace("Johny")
+
  #if the incoming is empty print the following code
     else 
 	puts"It's an empty string"

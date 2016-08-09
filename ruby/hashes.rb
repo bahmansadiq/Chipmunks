@@ -20,3 +20,9 @@ classic_des=gets.chomp
 home_decor[:likes_classic_design]=classic_des
 #display each key with the corresponding value.
 home_decor.each{|data, detail| puts" #{data}: #{detail}"}
+#Use applicant choice to make decission 
+if home_decor[:likes_classic_design]=="yes"
+  puts "#{home_decor[:name]} likes classic design."
+else
+  puts "#{home_decor[:name]} does not like classic design."
+end

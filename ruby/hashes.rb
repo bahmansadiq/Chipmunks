@@ -26,3 +26,7 @@ if home_decor[:likes_classic_design]=="yes"
 else
   puts "#{home_decor[:name]} does not like classic design."
 end
+#Ask the applicant if he would like to change any information at the list
+puts"would you like to update any of the given informatio? ('yes' or 'no')"
+while true 
+answer=gets.chomp

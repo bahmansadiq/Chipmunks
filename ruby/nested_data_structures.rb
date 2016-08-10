@@ -33,3 +33,11 @@ puts zas_motor["colors"]
 puts"Corolla #{zas_motor["Toyota"]["Corolla"][0]}'s price is $3000.00"
 puts"Corolla #{zas_motor["Toyota"]["Corolla"][1]}'s price is $500.00"
 puts"Corolla #{zas_motor["Toyota"]["Corolla"][2]}'s price is $8000.00"
+
+#Update Price for a car
+puts" Price for#{zas_motor["Lexus"]} is:"
+puts"#{zas_motor["Price"]='$3500.00'}"
+
+puts"Inventory list after Updating Lexus is:"
+puts"#{zas_motor}"
+

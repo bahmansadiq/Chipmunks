@@ -10,4 +10,12 @@ zas_motor={
 				"Lexus"=> "SUV",
 				"colors" =>["white", "black", "pink"," Silver"],
 				"price"=>{ }
-}
+        }
+#To print specific nested data structure in zas_motor 
+puts"Zas Motor has Toyota Corolla years: #{zas_motor["Toyota"]["Corolla"]} available!"
+
+#Print all the zas Motor's inventory list 
+puts"Full inventory list is:"
+zas_motor.each do |make, mod| 
+puts"make #{make} model #{mod}"  
+end 

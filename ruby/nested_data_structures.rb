@@ -10,7 +10,7 @@ zas_motor={
 				"Lexus"=> "SUV",
 				"colors" =>["white", "black", "pink"," Silver"],
 				"price"=>{ }
-        }
+         }
 #To print specific nested data structure in zas_motor 
 puts"Zas Motor has Toyota Corolla years: #{zas_motor["Toyota"]["Corolla"]} available!"
 
@@ -35,9 +35,9 @@ puts"Corolla #{zas_motor["Toyota"]["Corolla"][1]}'s price is $500.00"
 puts"Corolla #{zas_motor["Toyota"]["Corolla"][2]}'s price is $8000.00"
 
 #Update Price for a car
-puts" Price for#{zas_motor["Lexus"]} is:"
+puts" Price for #{zas_motor["Lexus"]} is:"
 puts"#{zas_motor["Price"]='$3500.00'}"
 
-puts"Inventory list after Updating Lexus is:"
+puts"Inventory list after Updating #{zas_motor["Lexus"]} is:"
 puts"#{zas_motor}"
 

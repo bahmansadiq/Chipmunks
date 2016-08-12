@@ -42,3 +42,4 @@ answer= out.split(" ").map!{|result|
 
 end 
 swapnames("Bahman Sadiq")
+#p swapnames("Felicia Torres") == "Vussit Gimodoe"

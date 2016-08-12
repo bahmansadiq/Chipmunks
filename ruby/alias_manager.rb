@@ -11,6 +11,12 @@ def encrypt_vowels(vowel)
 	vowels_out += vowels[vowels.index(vowel)+1]
 end 
 
+def encryp_consonat(cons)
+	consonant_out =""
+	consonant= "bcdfghjklmnpqrstvwxyz"
+	consonant_out += consonant[consonant.index(cons) +1]
+end 
+
 def swapnames(name)
 vowels="aeioua"
 consonant= "bcdfghjklmnpqrstvwxyz"

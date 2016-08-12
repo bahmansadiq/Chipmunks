@@ -37,3 +37,8 @@ swap_names.chars.each do |character|
 	
 	
 end 
+answer= out.split(" ").map!{|result| 
+ result.capitalize}.join(' ')
+
+end 
+swapnames("Bahman Sadiq")

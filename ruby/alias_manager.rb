@@ -6,19 +6,17 @@
 #Declare list of consonants and then check the rest of letters in consonant and forward them one letter ahead in consonants only.
 
 def encrypt_vowels(vowel)
-	vowels="aeioua"
+	vowels="aeiou"
 	vowels_out=""
 	vowels_out += vowels[vowels.index(vowel)+1]
 end 
-
 def encryp_consonat(cons)
 	consonant_out =""
 	consonant= "bcdfghjklmnpqrstvwxyz"
 	consonant_out += consonant[consonant.index(cons) +1]
 end 
-
 def swapnames(name)
-vowels="aeioua"
+vowels="aeiou"
 consonant= "bcdfghjklmnpqrstvwxyz"
 answer =""
 split_names=name.downcase.split(" ")
@@ -37,9 +35,12 @@ swap_names.chars.each do |character|
 	
 	
 end 
+
 answer= out.split(" ").map!{|result| 
  result.capitalize}.join(' ')
 
 end 
-swapnames("Bahman Sadiq")
+puts" Enter your first and last names (e.g 'Danial Jack')"
+name=gets.chomp 
+swapnames(name)
 #p swapnames("Felicia Torres") == "Vussit Gimodoe"

@@ -13,7 +13,7 @@ end
 
 def encryp_consonat(cons)
 	consonant_out =""
-	consonant= "bcdfghjklmnpqrstvwxyza"
+	consonant= "bcdfghjklmnpqrstvwxyzb"
 	consonant_out += consonant[consonant.index(cons) +1]
 end 
 

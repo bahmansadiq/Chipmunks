@@ -21,3 +21,18 @@
 #bite:yes
 #Scratch:yes
 #carry weight:no .
+
+
+class Puppy
+	def woof(name)
+		puts" #{name} woof woof !"
+	end 
+	
+	def puppy_bite(name, bites)
+		puts" #{name} #{bites} bite"
+	end 
+end 
+
+puppy=Puppy.new 
+puppy.woof("Rocky")
+puppy.puppy_bite("jack", "does n't")

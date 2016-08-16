@@ -6,8 +6,12 @@ class Puppy
   end
   def speak(num)
   	num.to_i.times{puts("woof!")}
-  end 
+  end
 
+  def roll_over
+    puts"*roll_over"
+  end 
+ 
 end
 
 puppy=Puppy.new

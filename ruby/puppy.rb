@@ -11,3 +11,13 @@
 #Maximum Weight : 20 lbs
 # does it have nails: yes
 #Exterior Hears:yes
+
+
+
+
+#Behavior:
+#Jump:yes
+#Run: yes
+#bite:yes
+#Scratch:yes
+#carry weight:no .

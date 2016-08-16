@@ -45,21 +45,21 @@ class Myclass
 	def katty(name)
 		puts"Hi, #{name}"
 		
-   end 
-    
-    def bob(name, age)
-    	puts"#{name} is #{age} years old!"
-    end 
+	end 
+	
+	def bob(name, age)
+		puts"#{name} is #{age} years old!"
+	end 
 end 
 
 
 storage=[]
 
 for i in 1..50
- storage << Myclass.new 
+	storage << Myclass.new 
 end 
 
 storage.each do|items|
-	 items.katty("John Marthon")
-    items.bob("Zack", 34)
+	items.katty("John Marthon")
+	items.bob("Zack", 34)
 end 

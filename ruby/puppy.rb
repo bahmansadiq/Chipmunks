@@ -13,3 +13,9 @@
 #Exterior Hears:yes
 
 
+#Behavior:
+#Jump:yes
+#Run: yes
+#bite:yes
+#Scratch:yes
+#carry weight:no .

@@ -4,7 +4,7 @@ class	Santa
 		@gender=gender
 		@reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age=0
-		puts"Initializing Santa instance ..."
+		@ethnicity="ethnicity"
 	end
 	
 	def speak
@@ -26,9 +26,15 @@ class	Santa
 	def gender=(update_gender)
 		@gender=update_gender
 	end 
-
+	
+	def age 
+		@age 
+	end 
+	def ethnicity
+		@ethnicity
+	end 
 	def about
-		puts"name #{@name} and gender #{@gender}"
+		puts"name #{@name} age #{@age} gender #{@gender} and ethnicity #{@ethnicity}"
 		puts" reindeer_ranking new list"
 		puts"#{@reindeer_ranking}"
 	end 
@@ -41,6 +47,8 @@ santa.eat_milk_and_cookies("kitcat")
 santa.celebrate_birthday(12)
 santa.get_mad_at("Hasti")
 santa.gender="Bichol"
+p santa.ethnicity
+p santa.age 
 santa.about
 
 

@@ -65,16 +65,17 @@ example_genders = ["agender", "female", "bigender", "male", "female", "gender fl
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_genders.length.times do |i|
    santas << Santa.new(example_genders[i], example_ethnicities[i])
-   puts"#{santas}"
+  
 end
+ puts"#{santas}"
 
 
 rand_select=[]
 puts"Randomly selected  santas and their genders"
 for index in 0..example_ethnicities.length
 	 rand_select << Santa.new(example_ethnicities.sample, example_genders.sample)
-	 puts"#{rand_select}"
+	 
 end 
-
+puts"#{rand_select}"
 
 

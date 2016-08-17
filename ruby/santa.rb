@@ -1,4 +1,6 @@
 class	Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 	def initialize(name, gender)
 		@name=name 
 		@gender=gender
@@ -22,17 +24,18 @@ class	Santa
 	def get_mad_at(name)
 		@reindeer_ranking.push(name)
 	end 
-	
-	def gender=(update_gender)
-		@gender=update_gender
-	end 
-	
-	def age 
-		@age 
-	end 
-	def ethnicity
-		@ethnicity
-	end 
+#setter method	
+#	def gender=(update_gender)
+#		@gender=update_gender
+#	end 
+
+#Getter methods	
+#	def age 
+#		@age 
+#	end 
+#	def ethnicity
+#		@ethnicity
+#	end 
 	def about
 		puts"name #{@name} age #{@age} gender #{@gender} and ethnicity #{@ethnicity}"
 		puts" reindeer_ranking new list"

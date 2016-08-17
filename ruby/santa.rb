@@ -38,11 +38,11 @@ class	Santa
 #	def ethnicity
 #		@ethnicity
 #	end 
-	def about
-		puts"name #{@name} age #{@age} gender #{@gender} and ethnicity #{@ethnicity}"
-		puts" reindeer_ranking new list"
-		puts"#{@reindeer_ranking}"
-	end 
+def about
+	puts"name #{@name} age #{@age} gender #{@gender} and ethnicity #{@ethnicity}"
+	puts" reindeer_ranking new list"
+	puts"#{@reindeer_ranking}"
+end 
 
 end
 
@@ -59,18 +59,22 @@ p santa.age
 p santa.about
 
 
-puts"list of santas"
+puts"list of created santas"
 santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "Shemale", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "Albanians", "Persians", "N/A"]
-len=example_ethnicities.length 
-
-for i in 1..len
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+   santas << Santa.new(example_genders[i], example_ethnicities[i])
+   puts"#{santas}"
 end
-rand_select=[]
-rand_select << Santa.new(example_ethnicities.sample, example_genders.sample)
 
- 
+
+rand_select=[]
+puts"Randomly selected  santas and their genders"
+for index in 0..example_ethnicities.length
+	 rand_select << Santa.new(example_ethnicities.sample, example_genders.sample)
+	 puts"#{rand_select}"
+end 
+
+
 

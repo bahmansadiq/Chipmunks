@@ -17,12 +17,16 @@ class	Santa
 	
 	def celebrate_birthday(age)
 		@age= age + 1
-		puts"Happy #{@age} birthday "
+		puts"Happy #{@age} birthday"
 	end 
 	def get_mad_at(name)
 		@reindeer_ranking.push(name)
-		p @reindeer_ranking
 	end 
+	
+	def gender=(update_gender)
+		@gender=update_gender
+	end 
+
 	def about
 		puts"name #{@name} and gender #{@gender}"
 		puts" reindeer_ranking new list"
@@ -36,6 +40,7 @@ santa.speak
 santa.eat_milk_and_cookies("kitcat")
 santa.celebrate_birthday(12)
 santa.get_mad_at("Hasti")
+santa.gender="Bichol"
 santa.about
 
 
@@ -43,5 +48,5 @@ santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_ethnicities.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end

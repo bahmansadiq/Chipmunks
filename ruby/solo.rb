@@ -44,16 +44,19 @@ class Survey
 
 
 end 
-
-puts"What is your name?"
+result=[]
+while true 
+puts"Please provide your name or type 'done' to exit?"
 name=gets.chomp
+break if name=="done"
 puts"What is your score on the final test?"
 score=gets.chomp.to_f
 puts"Which year's result would you like to access?"
 year=gets.chomp.to_i 
-survey=Survey.new(name, score, year)
+result << Survey.new(name, score, year)
 #Driver code to over write name attribute with attr_accessor
 #survey.name="Jose"
 #Driver code to read year attribute with attr_reader
 #survey.year
-survey.students_survery
+result << result.students_survery
+end 

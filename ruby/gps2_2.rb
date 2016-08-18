@@ -74,3 +74,19 @@ about(list)
 
 
 
+#What did you learn about pseudocode from working on this challenge?
+#It helped me out to find proper solution breaking each tast to smaller steps and make progress.
+
+#What are the tradeoffs of using arrays and hashes for this challenge?
+#Using a hash in this challenge makes me able to store the items with their associated values.
+
+#What kind of things can you pass into methods as arguments?
+#we pass hash, array, string, integer any datatype, 
+
+#How can you pass information between methods?
+#1- You can store the method to a varibale and pass the variable to the other method
+#2- you can pass the result of a method by sending it as an argument to the other methods
+
+
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+#that i can pass a hash to the methods and keep updating it and call it again.

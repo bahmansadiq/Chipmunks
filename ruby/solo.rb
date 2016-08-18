@@ -6,6 +6,9 @@
 #for every grades(A, B or fail) we write a method 
 
 class Survey
+
+	attr_reader :percentage, :year
+	attr_accessor :name
 	def initialize(name, percentage, year)
 		@name=name
 		@percentage=percentage
@@ -42,5 +45,6 @@ class Survey
 
 end 
 
-survey=Survey.new("Bahman", 69, 2016)
+survey=Survey.new("Benoy", 69, 2016)
+survey.name="Jose"
 survey.students_survery

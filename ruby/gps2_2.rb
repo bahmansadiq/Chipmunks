@@ -29,6 +29,7 @@
 # steps: go through this list and print each key with the value
 # output: print hash list
 
+
 def create_list(incoming)
 	list={}
 	incoming.split(" ").each{|items|  list[items]=1}
@@ -40,16 +41,27 @@ def add_item_to_list(list, new_item, quantity)
 	puts"#{list}"
 	list
 end 
-	
+
 def remove_item_from_list(list, name)
 	list.delete_if{|item, quantity| item==name}
 	puts"The grossery list after deleting #{name} is:"
 	puts"#{list}"
 	list
 end 
+
+def update_list(list, item_name, update_quantity)
+#If the item_name is in the list them update it with new quantity.
+	if list.assoc(item_name)
+		list[item_name]=update_quantity
+	end 
+puts"The grossery list after updating #{item_name} with quantity #{update_quantity} is:"
+p list
+list
+end 
 list=create_list("Carrots Apples Cereals Pizza")
 add_item_to_list(list, "Burger", 5)
 remove_item_from_list(list, "Apples")
+update_list(list, "Cereals",5)
 
 
 

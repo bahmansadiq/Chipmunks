@@ -30,17 +30,28 @@
 # output: print hash list
 
 def create_list(incoming)
-	incoming.split("")
-
+	list={}
+	incoming.split(" ").each{|items|  list[items]=1}
+	list 
 end
-def add_item_list(list, new_item, quantity)
+def add_item_to_list(list, new_item, quantity)
 	list[new_item]= quantity
 	puts"After adding #{quantity} #{new_item} to our grossery list is:"
 	puts"#{list}"
 	list
 end 
-creatlist=create_list("Carrots Apples Cereals Pizza")
-add_item_list(creatlist,"Burger", 23)
+	
+def remove_item_from_list(list, name)
+	list.delete_if{|item, quantity| item==name}
+	puts"The grossery list after deleting #{name} is:"
+	puts"#{list}"
+	list
+end 
+list=create_list("Carrots Apples Cereals Pizza")
+add_item_to_list(list, "Burger", 5)
+remove_item_from_list(list, "Apples")
+
+
 
 
 

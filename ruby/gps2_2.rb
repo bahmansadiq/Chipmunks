@@ -62,9 +62,14 @@ def about(list)
 	list.each{|item, quantity| puts"#{item} = #{quantity}"}
 end 
 list=create_list("Carrots Apples Cereals Pizza")
-add_item_to_list(list, "Burger", 5)
+add_item_to_list(list,"Lemonade", 2)
+add_item_to_list(list,"Tomatoes", 3)
+add_item_to_list(list, "Onions", 1)
+add_item_to_list(list,"Ice Cream", 4)
+remove_item_from_list(list,"Lemonade")
 remove_item_from_list(list, "Apples")
 update_list(list, "Cereals",5)
+update_list(list, "Ice Cream", 1)
 about(list)
 
 

@@ -39,14 +39,14 @@ def add_item_to_list(list, new_item, quantity)
 	list[new_item]= quantity
 	puts"After adding #{quantity} #{new_item} to our grossery list is:"
 	puts"#{list}"
-	list
+
 end 
 
 def remove_item_from_list(list, name)
 	list.delete_if{|item, quantity| item==name}
 	puts"The grossery list after deleting #{name} is:"
 	puts"#{list}"
-	list
+
 end 
 
 def update_list(list, item_name, update_quantity)
@@ -56,14 +56,16 @@ def update_list(list, item_name, update_quantity)
 	end 
 puts"The grossery list after updating #{item_name} with quantity #{update_quantity} is:"
 p list
-list
+end 
+def about(list)
+	puts"The grossery list with each item and associated quantity"
+	list.each{|item, quantity| puts"#{item} = #{quantity}"}
 end 
 list=create_list("Carrots Apples Cereals Pizza")
 add_item_to_list(list, "Burger", 5)
 remove_item_from_list(list, "Apples")
 update_list(list, "Cereals",5)
-
-
+about(list)
 
 
 

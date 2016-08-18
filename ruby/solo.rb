@@ -45,6 +45,15 @@ class Survey
 
 end 
 
-survey=Survey.new("Benoy", 69, 2016)
-survey.name="Jose"
+puts"What is your name?"
+name=gets.chomp
+puts"What is your score on the final test?"
+score=gets.chomp.to_f
+puts"Which year's result would you like to access?"
+year=gets.chomp.to_i 
+survey=Survey.new(name, score, year)
+#Driver code to over write name attribute with attr_accessor
+#survey.name="Jose"
+#Driver code to read year attribute with attr_reader
+#survey.year
 survey.students_survery

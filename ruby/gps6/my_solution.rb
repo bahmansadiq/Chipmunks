@@ -1,28 +1,35 @@
+
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: ].
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+#Is used to require another file to which shares the same directory and it's a sub set of require
+#require is used to call upon the modules and library methods, basically are not at the same directory with the file we are working on, 
 #
 require_relative 'state_data'
 
 class VirusPredictor
-
+# method initialize is used to construct the data structure 
+#takes three parameters , defining instance variables to be accessed within other methods to the class.
+  
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+#This method is simply getting data from other two methods.
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
-
+#method to takes three arguments and arrange the data print it to the user.
+  #predicted deaths determines how many people in a particular state based on the given data
+  
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -40,7 +47,7 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
-
+# spead_of_spread determains how fast the virus will be spread in the state based on the arguments given in terms of months.
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -70,7 +77,8 @@ end
  # initialize VirusPredictor for each state
 
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+
+alabama = VirusPredictor.new(state_name, STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
 
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])

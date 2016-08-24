@@ -14,9 +14,9 @@ function reverse(name){
 	}
 	return reverseName;
 }
-var out="";
-var input= prompt("please enter a string to reverse or type 'done' to exit!");
-out+=(reverse(input));
+var out=[];
+var input=window.prompt("please enter a string to reverse or type 'done' to exit!");
+out.push(reverse(input));
 console.log(out);
 
 

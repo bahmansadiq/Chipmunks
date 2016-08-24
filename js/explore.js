@@ -9,11 +9,16 @@ function reverse(name){
 	var len=name.length -1; 
 	
 	for (var i= len; i>=0; i--) {
-	reverseName += name[i];
+		reverseName += name[i];
 
 	}
-	console.log(reverseName);
-   return reverseName;
+	return reverseName;
 }
-reverse("hello");
+var out="";
+var input= prompt("please enter a string to reverse or type 'done' to exit!");
+out+=(reverse(input));
+console.log(out);
+
+
+//reverse("hello");
 // output: olleh

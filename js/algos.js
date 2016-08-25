@@ -6,3 +6,24 @@
 
 
 //["long phrase","longest phrase","longer phrase"]= "longest phrase"
+
+var incoming=["long phrase","longest phrase","loger phrase"] 
+
+
+function longestword(incoming){
+
+var maxword= incoming[0];
+
+		for(var i=0; i< incoming.length; i++)
+	    	{ 
+				if(incoming[i].length > maxword.length)
+				{
+     				maxword=incoming[i];
+     				
+				}
+			}
+		return maxword;
+}
+console.log(longestword(incoming));
+
+//output: "longest phrase"

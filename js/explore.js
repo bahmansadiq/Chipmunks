@@ -3,7 +3,6 @@
 // store them in a new variable as last come first stored
 // go through the new variable using for loop and return the new varibale
 // call the function using console.log(); passing an argument to the function.
-
 function reverse(name){
 	var reverseName="";
 	var len=name.length -1; 
@@ -15,9 +14,21 @@ function reverse(name){
 	return reverseName;
 }
 var out=[];
-var input=window.prompt("please enter a string to reverse or type 'done' to exit!");
-out.push(reverse(input));
+while (true)
+{
+	var input=prompt.("please enter a string to reverse or type 'done' to exit!");
+	if (input=="done")
+		{ break;}
+
+	else 
+	{
+		out.push(reverse(input));
+		true;
+	}
+}
+
 console.log(out);
+
 
 
 //reverse("hello");

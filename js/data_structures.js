@@ -20,3 +20,15 @@ console.log(myHorses(names, colors));
 
 //console.log(names);
 //console.log(colors);
+
+function Car(make, model, year){
+	console.log("This is our car", this);
+	this.make=make;
+	this.model=model;
+	this.year=year;
+	this.color=function() { console.log("it is really fancy color"); };
+}
+var car= new Car("Toyota", "Camry", 2015);
+console.log(car);
+console.log("give the color a function value!");
+car.color();

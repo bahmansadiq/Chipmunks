@@ -8,12 +8,12 @@ function myHorses(names, colors){
 // declare an empty object.
 var	horse={};
 // use for loop to go through the names and colors arrays
-	for(var i=0; i < names.length; i++ )
-	{
+for(var i=0; i < names.length; i++ )
+{
 // assign the key-value from names and colors to the object.		
-		horse[names[i]]=colors[i];
-	}
-	return horse;
+horse[names[i]]=colors[i];
+}
+return horse;
 }
 // print out the function with arrays passed.
 console.log(myHorses(names, colors));
@@ -21,14 +21,22 @@ console.log(myHorses(names, colors));
 //console.log(names);
 //console.log(colors);
 
-function Car(make, model, year){
+function Car(make, model, year, isGoodcar){
 	console.log("This is our car", this);
 	this.make=make;
 	this.model=model;
 	this.year=year;
+	this.isGoodcar=isGoodcar;
 	this.color=function() { console.log("it is really fancy color"); };
 }
-var car= new Car("Toyota", "Camry", 2015);
-console.log(car);
+// driver code to make three instances of Car
+var car= new Car("Toyota", "Camry", 2015, false);
+var newcar= new Car("Honda", "Civic", 2011, true);
+var thirdcar= new Car("Ford", "Mustang", 1978, true);
+// Print out three instances 
+console.log(car, newcar, thirdcar);
 console.log("give the color a function value!");
 car.color();
+newcar.color();
+thirdcar.color();
+

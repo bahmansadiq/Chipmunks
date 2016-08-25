@@ -16,7 +16,7 @@ function reverse(name){
 var out=[];
 while (true)
 {
-	var input=prompt.("please enter a string to reverse or type 'done' to exit!");
+	var input=prompt("please enter a string to reverse or type 'done' to exit!");
 	if (input=="done")
 		{ break;}
 

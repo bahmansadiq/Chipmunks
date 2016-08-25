@@ -12,18 +12,33 @@ var incoming=["long phrase","longest phrase","loger phrase"]
 
 function longestword(incoming){
 
-var maxword= incoming[0];
+	var maxword= incoming[0];
 
-		for(var i=0; i< incoming.length; i++)
-	    	{ 
-				if(incoming[i].length > maxword.length)
-				{
-     				maxword=incoming[i];
-     				
-				}
-			}
-		return maxword;
+	for(var i=0; i< incoming.length; i++)
+	{ 
+		if(incoming[i].length > maxword.length)
+		{
+			maxword=incoming[i];
+		}
+	}
+	return maxword;
 }
 console.log(longestword(incoming));
 
 //output: "longest phrase"
+
+var findmatching=function(data, value){
+var	info={"age": 45};
+   info[data]=value;
+   var firstkey=info.name;
+   var x;
+    for( var x in info)
+   {
+    console.log(info[x]);
+    }
+
+}
+
+findmatching("name", "Bahman")
+
+//{name: "Steven", age: 54} and {name: "Tamir", age: 54}, the function would return true

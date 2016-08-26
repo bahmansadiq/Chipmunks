@@ -57,3 +57,7 @@ var	stor_random=[];
    // Just simply return the array.
      return  stor_random;
 }
+var strLength=prompt("Enter string length")
+randomString(strLength);
+var number=prompt("Enter an array length!");
+console.log(listOfStrings(number));

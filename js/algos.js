@@ -1,3 +1,19 @@
+
+
+//release 1: Find a Key-Value Match
+
+// Define a funtion which takes two object lists as a parameters
+// Declare the lists
+// Iterate inside the first list for each item in the first list iterate through the second list
+// compare first pair value of the list 1 with each pair value of the second list and so on till you finish comparing each pair value of list 1 with the list 2
+// save the pair values which are equal in both the lists and print it
+
+
+
+
+
+
+
 // define a function which takes an array as a parameter
 // loop inside the array element and compare the lengths
 // assuming the index 0 is the longest and compare it to the next one

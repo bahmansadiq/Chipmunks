@@ -7,7 +7,21 @@
 // Iterate inside the first list for each item in the first list iterate through the second list
 // compare first pair value of the list 1 with each pair value of the second list and so on till you finish comparing each pair value of list 1 with the list 2
 // save the pair values which are equal in both the lists and print it
+var list1 = {name: "Tamir", age: 54, hight: 72, weight: 89};
+var list2 = {name: "Raja", age: 60, hight: 72, weight: 70};
+function comp(para1, para2){
 
+	for(var i in list1) {
+		for( var j in list2)
+			if (list1[i]==list2[j]) {
+				console.log("the matching pair key-value in the lists");
+				console.log (i,'=', list1[i]);
+				return true;
+
+			}
+		}
+	}
+	comp(list1, list2);
 
 
 
@@ -47,31 +61,31 @@ console.log(longestword(incoming));
 //Write a function that takes an integer for length, and builds and returns an array of strings of the given length. 
 // I have defined two functions one takes a length for the string and return a random string of the given length
 
- function randomString(str) {
-    var text = '';
-    var words = "abcdefghijklmnopqrstuvwxyz";
-    for(var i = 0; i < str; i++) {
+function randomString(str) {
+	var text = '';
+	var words = "abcdefghijklmnopqrstuvwxyz";
+	for(var i = 0; i < str; i++) {
    // text is going to have diffrent or random set of character depends on str passing in randomString
    // each time it runs using Math function and store it inside the text. 	
-        text += words.charAt(Math.floor(Math.random() * words.length));
-    }
+   text += words.charAt(Math.floor(Math.random() * words.length));
+}
     // Return text 
-  return text;
+    return text;
 }
 
 // another function to use the first function and create fixed length array of random strings.
 function listOfStrings(number){
-var	stor_random=[];	
+	var	stor_random=[];	
 //for loop runs according the number passed by the function.
-    for(var j=0; j< number; j++)
-    {
+for(var j=0; j< number; j++)
+{
   // call the first function and store the random strings inside the stor_random array; 	
-     stor_random.push(randomString(strLength));
+  stor_random.push(randomString(strLength));
   // I can upper case the string and print or    
   //   console.log(stor_random[j].charAt(0).toUpperCase() + stor_random[j].slice(1).toLowerCase() + " ");
-     }
+}
    // Just simply return the array.
-     return  stor_random;
+   return  stor_random;
 }
 var strLength=prompt("Enter string length")
 randomString(strLength);

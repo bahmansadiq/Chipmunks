@@ -27,18 +27,33 @@ console.log(longestword(incoming));
 
 //output: "longest phrase"
 
-var findmatching=function(data, value){
-var	info={"age": 45};
-   info[data]=value;
-   var firstkey=info.name;
-   var x;
-    for( var x in info)
-   {
-    console.log(info[x]);
-    }
 
+//Write a function that takes an integer for length, and builds and returns an array of strings of the given length. 
+// I have defined two functions one takes a length for the string and return a random string of the given length
+
+ function randomString(str) {
+    var text = '';
+    var words = "abcdefghijklmnopqrstuvwxyz";
+    for(var i = 0; i < str; i++) {
+   // text is going to have diffrent or random set of character depends on str passing in randomString
+   // each time it runs using Math function and store it inside the text. 	
+        text += words.charAt(Math.floor(Math.random() * words.length));
+    }
+    // Return text 
+  return text;
 }
 
-findmatching("name", "Bahman")
-
-//{name: "Steven", age: 54} and {name: "Tamir", age: 54}, the function would return true
+// another function to use the first function and create fixed length array of random strings.
+function listOfStrings(number){
+var	stor_random=[];	
+//for loop runs according the number passed by the function.
+    for(var j=0; j< number; j++)
+    {
+  // call the first function and store the random strings inside the stor_random array; 	
+     stor_random.push(randomString(strLength));
+  // I can upper case the string and print or    
+  //   console.log(stor_random[j].charAt(0).toUpperCase() + stor_random[j].slice(1).toLowerCase() + " ");
+     }
+   // Just simply return the array.
+     return  stor_random;
+}

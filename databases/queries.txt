@@ -1,0 +1,35 @@
+$ sqlite3
+SQLite version 3.8.7.2 2014-11-18 20:57:56
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+
+sqlite> .open ticket
+sqlite> .table
+flights     passengers
+sqlite> select * from passengers;
+2|John|San Francisco|Dalas|2|
+3|Nasim|San Francisco|Paris|3|
+4|George|Chicago|Istanbul|3|
+5|Adam|Los Angeles|India|1|
+6|Zack|San Diego|New York|1|
+sqlite> .mode head on
+Error: mode should be one of: column csv html insert line list tabs tcl
+sqlite> .head on
+sqlite> select * from passengers;
+ticketno|name|Address|Destination|flight_no|flight_node
+2|John|San Francisco|Dalas|2|
+3|Nasim|San Francisco|Paris|3|
+4|George|Chicago|Istanbul|3|
+5|Adam|Los Angeles|India|1|
+6|Zack|San Diego|New York|1|
+sqlite> INSERT INTO passengers(name, Address, Destination, flight_no) VALUES("Sadiq", "Los Vegas", "Miami", 4);
+sqlite> select * from passengers;
+ticketno|name|Address|Destination|flight_no|flight_node
+2|John|San Francisco|Dalas|2|
+3|Nasim|San Francisco|Paris|3|
+4|George|Chicago|Istanbul|3|
+5|Adam|Los Angeles|India|1|
+6|Zack|San Diego|New York|1|
+7|Sadiq|Los Vegas|Miami|4|
+sqlite>

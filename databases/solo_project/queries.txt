@@ -1,0 +1,100 @@
+$ sqlite3
+SQLite version 3.8.7.2 2014-11-18 20:57:56
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open tickets.db
+sqlite> .table
+sqlite> CREATE TABLE flights(flight_no INTEGER PRIMARY KEY, airline VARCHAR(255), capacity INTEGER);
+sqlite> .TABLE
+Error: unknown command or invalid arguments:  "TABLE". Enter ".help" for help
+sqlite> .table
+flights
+sqlite> INSERT INTO flights(airline, capacity) VALUES("Delta", 250);
+sqlite> INSERT INTO flights(airline, capacity) VALUES("USS", 5000);
+sqlite> INSERT INTO flights(airline, capacity) VALUES("South West", 320);
+sqlite>
+
+
+
+sqlite> .open tickets.db
+sqlite> .table
+flights     passengers
+
+sqlite> .schema
+CREATE TABLE flights(flight_no INTEGER PRIMARY KEY, airline VARCHAR(255), capacity INTEGER);
+CREATE TABLE passengers(ticketno INTEGER PRIMARY KEY, Name VARCHAR(255), Address VARCHAR(255), Destination VARCHAR(255), flight_no INTEGER,
+FOREIGN KEY(flight_no) REFERENCES flights(flight_code));
+sqlite>
+
+
+
+1|Zack|San Diego|New York|1
+2|John|San Francisco|France|2
+sqlite> INSERT INTO passengers(Name, Address, Destination, flight_no) VALUES("Nasim", "France", "Delhi", 3);
+sqlite> INSERT INTO passengers(Name, Address, Destination, flight_no) VALUES("George", "D.C", "Germany", 1);
+sqlite> INSERT INTO passengers(Name, Address, Destination, flight_no) VALUES("Adam", "San Diego", "London", 1);
+sqlite>
+
+sqlite> SELECT * FROM passengers, flights WHERE passengers.flight_no=flights.flight_no;
+1|Zack|San Diego|New York|1|1|Delta|250
+2|John|San Francisco|France|2|2|USS|5000
+3|Nasim|France|Delhi|3|3|South West|320
+4|George|D.C|Germany|1|1|Delta|250
+5|Adam|San Diego|London|1|1|Delta|250
+sqlite>
+sqlite> UPDATE passengers SET flight_no=3 WHERE Name="Nasim";
+sqlite> Select * from passengers;
+1|Zack|San Diego|New York|1
+2|John|San Francisco|France|2
+3|Nasim|France|Delhi|3
+4|George|D.C|Germany|1
+5|Adam|San Diego|London|1
+
+
+sqlite> SELECT Name, Address from passengers, flights WHERE passengers.flight_no=flights.flight_no;
+Zack|San Diego
+John|San Francisco
+Nasim|France
+George|D.C
+Adam|San Diego
+sqlite> SELECT Name, Address, airline from passengers, flights WHERE passengers.flight_no=flights.flight_no;
+Zack|San Diego|Delta
+John|San Francisco|USS
+Nasim|France|South West
+George|D.C|Delta
+Adam|San Diego|Delta
+sqlite> SELECT Name, Address, Destination, airline from passengers, flights WHERE passengers.flight_no=flights.flight_no;
+Zack|San Diego|New York|Delta
+John|San Francisco|France|USS
+Nasim|France|Delhi|South West
+George|D.C|Germany|Delta
+Adam|San Diego|London|Delta
+sqlite>
+sqlite> delete FROM passengers WHERE Name="Adam";
+sqlite> SELECT * FROM passengers;
+1|Zack|San Diego|New York|1
+2|John|San Francisco|France|2
+3|Nasim|France|Delhi|3
+4|George|D.C|Germany|1
+
+
+LEFT OUTER JOIN
+sqlite> SELECT * FROM passengers LEFT OUTER JOIN flights ON  passengers.flight_no= flights.flight_no;
+1|Zack|San Diego|New York|1|1|Delta|250
+2|John|San Francisco|France|2|2|USS|5000
+3|Nasim|France|Delhi|3|3|South West|320
+4|George|D.C|Germany|1|1|Delta|250
+sqlite>
+sqlite> SELECT  passengers.Name, passengers.Address, passengers.Destination, flights.flight_no FROM passengers INNER JOIN flights ON passengers.flight_no=f
+lights.flight_no;
+Zack|San Diego|New York|1
+John|San Francisco|France|2
+Nasim|France|Delhi|3
+George|D.C|Germany|1
+sqlite>
+sqlite> SELECT  passengers.Name, passengers.Address, passengers.Destination, flights.flight_no FROM passengers RIGHT OUTER  JOIN flights ON passengers.flig
+ht_no=flights.flight_no;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite>
+
